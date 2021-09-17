@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+Listado Estudiantes
+{% endblock %}
+
+{% block blog %}
+
+   <center><h1>Listar Estudiantes</h1></center> 
+    <table border="" class="table table-dark table-striped">
+        <thead>
+        <tr>
+            <th scope = 'col'>Nombre</th>
+            <th scope = 'col'>Apellido</th>
+            <th scope = 'col'>Direccion</th>
+            <th scope = 'col'>carne</th>
+          
+           
+        </tr>
+        </thead>
+        
+        {% for estudiantess in object_list %} <!-- est nombre de la variable -->
+        <tbody>
+        <tr>
+            <td>{{ estudiantess.nombre }}</td>
+            <td>{{ estudiantess.apellido }}</td>
+            <td>{{ estudiantess.direccion }}</td>
+            <td>{{ estudiantess.carne }}</td>
+            
+        </tr>
+        </tbody>
+        {% endfor %}
+    
+    </table>
+    
+
+   
+         
+
+{% endblock %}

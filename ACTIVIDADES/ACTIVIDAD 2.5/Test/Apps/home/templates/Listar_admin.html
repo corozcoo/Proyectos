@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+Listado Administradores
+{% endblock %}
+
+{% block blog %}
+    <center><h1>Listar Administradores</h1></center> 
+    <table border="" class="table table-dark table-striped">
+        <thead>
+        <tr>
+            <th scope = 'col'>Nombre</th>
+            <th scope = 'col'>Apellido</th>
+            <th scope = 'col'>Direccion</th>
+            <th scope = 'col'>carne</th>
+          
+           
+        </tr>
+        </thead>
+        
+        {% for adminss in object_list %} <!-- est nombre de la variable -->
+        <tbody>
+        <tr>
+            <td>{{ adminss.nombre }}</td>
+            <td>{{ adminss.apellido }}</td>
+            <td>{{ adminss.direccion }}</td>
+            <td>{{ adminss.carne }}</td>
+            
+        </tr>
+        </tbody>
+        {% endfor %}
+    
+    </table>
+         
+
+{% endblock %}
