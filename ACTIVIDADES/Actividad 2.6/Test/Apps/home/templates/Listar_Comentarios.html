@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+Listado Comentarios
+{% endblock %}
+
+{% block blog %}
+
+   <center><h1>Listar Comentarios</h1></center> 
+    <table border="" class="table table-dark table-striped">
+        <thead>
+        <tr>
+            
+            <th scope = 'col'>Contenido</th>
+            <th scope = 'col'>fecha</th>
+           
+          
+           
+        </tr>
+        </thead>
+        
+        {% for comentarioss in object_list %} <!-- est nombre de la variable -->
+        <tbody>
+        <tr>
+           
+            <td>{{ comentarioss.contenido }}</td>
+            <td>{{ comentarioss.fecha }}</td>
+          
+            
+        </tr>
+        </tbody>
+        {% endfor %}
+    
+    </table>
+    
+
+   
+         
+
+{% endblock %}

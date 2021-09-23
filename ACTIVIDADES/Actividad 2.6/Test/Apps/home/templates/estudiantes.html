@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+Estudiantes
+{% endblock %}
+
+{% block subtitulo %}
+Estudiantes news
+{% endblock %}
+
+{% block info %}
+A continuacion se mostraran los datos de los estudiantes
+{% endblock %}
+
+{% block blog %}
+<form method="POST">
+    {% csrf_token %} 
+    
+    
+    {% if error %}
+    <h2>{{error}}</h2>
+    {% else %}
+
+    <form action="#" method="POST" enctype="multipart/form-data">
+    <div>
+        <div>{{form.nombre.label}}</div>
+        <div>{{form.nombre}}</div>
+        
+
+    </div>
+    <div>
+        <div>{{form.apellido.label}}</div>
+        <div>{{form.apellido}}</div>
+        
+
+    </div>
+    <div>
+        <div>{{form.direccion.label}}</div>
+        <div>{{form.direccion}}</div>
+        
+
+    </div>
+    <div>
+        <div>{{form.carne.label}}</div>
+        <div>{{form.carne}}</div>
+        
+
+    </div>
+
+    <button type = "submit" name="Enviar">Enviar</button>
+    </form>
+    {% endif %}
+    
+</form>
+{% endblock %}
